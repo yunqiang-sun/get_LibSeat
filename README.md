@@ -1,5 +1,10 @@
 ## What's this?
-利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到(可外网签到)
+基于 Python2 的利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到(可外网签到)
+## Get Started
+    git clone https://github.com/yunqiang-sun/get_LibSeat
+    cd get_LibSeat
+    python newSeatSpider.py
+
 ## School List
 | No | SchoolName |
 | - | :-: |
