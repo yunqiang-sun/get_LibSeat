@@ -1,10 +1,13 @@
+## Dependencies
+The first,you need to build a web-server such as Apache or Nginx on your computer, you can also place the json file on the third party servers as long as you can get it through the Get-Method. Besides, you need python 2.7+ to run this program (it does not support python3 now) and this program uses some python library such as follows
+* Request 2.18
+* urllib 3
 ## What's this?
-基于 Python2 的利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到(可外网签到)
+基于 Python2 的利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到 (可外网签到)
 ## Get Started
     git clone https://github.com/yunqiang-sun/get_LibSeat
     cd get_LibSeat
     python newSeatSpider.py
-
 ## School List
 | No | SchoolName |
 | - | :-: |
