@@ -7,7 +7,7 @@ The first,you need to build a web-server such as Apache or Nginx on your compute
 ## Get Started
     git clone https://github.com/yunqiang-sun/get_LibSeat
     cd get_LibSeat
-    python newSeatSpider.py
+    python newSeatCrawler.py
 ## School List
 | No | SchoolName |
 | - | :-: |
