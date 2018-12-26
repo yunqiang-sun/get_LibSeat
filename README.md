@@ -8,7 +8,7 @@ The first,you need to build a web-server such as Apache or Nginx on your compute
     git clone https://github.com/yunqiang-sun/get_LibSeat
     cd get_LibSeat
     python newSeatCrawler.py ## 预约，json是配置文件，放账号密码预约座位号时间等信息
-    python newCheckin.py ## 签到
+    python newCheckIn.py ## 签到
 ## 
 ## School List
 | No | SchoolName |
