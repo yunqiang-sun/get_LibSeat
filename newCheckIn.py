@@ -22,7 +22,8 @@ login_headers = {
     'User-Agent': 'doSingle/11 CFNetwork/811.5.4 Darwin/16.6.0',
     'Accept-Language': 'zh-cn',
     'token': 'ALO6C40F1I07052859',
-    'Accept-Encoding': 'gzip'
+    'Accept-Encoding': 'gzip',
+    'X-Forwarded-For': '10.167.159.118'
 }
 page_json = json.loads(r.text)
 for i in range(page_json['length']):
@@ -42,7 +43,8 @@ for i in range(page_json['length']):
         'User-Agent': 'doSingle/11 CFNetwork/811.5.4 Darwin/16.6.0',
         'Accept-Language': 'zh-cn',
         'token': token,
-        'Accept-Encoding': 'gzip'
+        'Accept-Encoding': 'gzip',
+        'X-Forwarded-For': '10.167.159.118'
     }
     page=requests.get(checkInURL,headers=headers,verify=False)
     print s   
