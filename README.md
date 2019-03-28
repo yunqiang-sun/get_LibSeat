@@ -9,7 +9,8 @@ r = requests.get('http://127.0.0.1/newinfo.json') 该行是读取数据文件, n
     cd get_LibSeat
     python newSeatCrawler.py ## 预约，json是配置文件，放账号密码预约座位号时间等信息
     python newCheckIn.py ## 签到
-## 
+## Tips
+使用 crontab 设置定时任务, 另外要注意学校服务器时间与你所用的服务器的微小时间差, 如果你设置的预约时间为 5:00 则有可能学校服务器的时间还没有到, 此时预约可能会失败, 可以在代码中加入 try.. except.. 做异常处理
 ## School List
 | No | SchoolName |
 | - | :-: |
