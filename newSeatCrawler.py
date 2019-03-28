@@ -9,8 +9,6 @@ import json
 import sys
 import urllib3
 urllib3.disable_warnings()
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 r = requests.get('http://127.0.0.1/newinfo.json')
 
@@ -28,7 +26,7 @@ login_headers = {
 }
 
 for i in range(page_json['length']):
-    print page_json['data'][i]['studentNum']
+    print (page_json['data'][i]['studentNum'])
     getTokenURL='https://seat.ujn.edu.cn:8443/rest/auth?username='+page_json['data'][i]['studentNum']+'&password='+page_json['data'][i]['password']
     tokenResponse=requests.get(getTokenURL,headers=login_headers,verify=False)
     login_json = json.loads(tokenResponse.text)
@@ -58,7 +56,3 @@ for i in range(page_json['length']):
     mainURL='https://seat.ujn.edu.cn:8443/rest/v2/freeBook'
     s=requests.post(mainURL,data=postdata,headers=headers,verify=False)
     print(s.text)
-    result=json.loads(s.text)
-    if(result['status']=='success'):
-        print("SUCCESS!")
-    

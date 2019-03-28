@@ -9,8 +9,6 @@ import json
 import sys
 import urllib3
 urllib3.disable_warnings()
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 r = requests.get('http://127.0.0.1/checkIn.json')
 
@@ -32,8 +30,6 @@ for i in range(page_json['length']):
     tokenResponse=requests.get(getTokenURL,headers=login_headers,verify=False)
     login_json = json.loads(tokenResponse.text)
     token=login_json['data']['token']
-    print(token)
-    #checkInURL='https://seat.ujn.edu.cn:8443/rest/v2/checkIn?token='+token
     checkInURL='https://seat.ujn.edu.cn:8443/rest/v2/checkIn'
     headers = {
         'Host': 'seat.ujn.edu.cn:8443',
@@ -47,5 +43,4 @@ for i in range(page_json['length']):
         'X-Forwarded-For': '10.167.159.118'
     }
     page=requests.get(checkInURL,headers=headers,verify=False)
-    print s   
     print(page.text)
