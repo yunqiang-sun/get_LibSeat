@@ -1,9 +1,9 @@
-## Dependencies
-The first,you need to build a web-server such as Apache or Nginx on your computer, you can also place the json file on the third party servers as long as you can get it through the Get-Method. Besides, you need python 2.7+ to run this program (it does not support python3 now) and this program uses some python library such as follows
-* Request 2.18
-* urllib 3
+## 依赖项
+r = requests.get('http://127.0.0.1/newinfo.json') 该行是读取数据文件, newinfo.json 中存放的是账号、密码、座位id、预约时间等数据, 我是将 json 文件放在本地服务器的 web 路径下了, 你也可以直接用普通读文件方法或者将这些数据放到数据库中读取
+
+整个程序很简短, 只是使用 requests 包来发送 HTTP(s) 请求
 ## What's this?
-基于 Python2 的利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到 (可外网签到)
+基于 Python 的利昂图书馆预约系统自动签到&预约程序。可支持自动预约、自动签到 (可外网签到-利用 X-Forwarded-For 字段)
 ## Get Started
     git clone https://github.com/yunqiang-sun/get_LibSeat
     cd get_LibSeat
